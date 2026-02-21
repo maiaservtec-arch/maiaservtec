@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>MAIA Serviços Técnicos | Mangaratiba RJ</title>
+<meta name="description" content="Manutenção em equipamentos térmicos de ensaio, controle e processo. Mangaratiba RJ." />
+<meta name="robots" content="index,follow" />
+
+<style>
+:root{
+  --green:#2F9E44;
+  --silver:#D0D0D0;
+  --text:#1f1f1f;
+  --muted:rgba(31,31,31,.75);
+  --border:rgba(31,31,31,.16);
+  --card:#ffffff;
+  --bg:#ffffff;
+  --radius:14px;
+  --shadow:0 8px 24px rgba(0,0,0,.06);
+  --max:880px;
+  --font:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:var(--font);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+}
+
+.wrap{
+  max-width:var(--max);
+  margin:auto;
+  padding:32px 16px 48px;
+}
+
+/* BLOCO CENTRALIZADO */
+.hero{
+  text-align:center;
+  margin-bottom:32px;
+}
+
+.logo{
+  width:200px;
+  background:var(--green);
+  border-radius:12px;
+  padding:12px;
+  display:block;
+  margin:0 auto 16px auto;
+}
+
+.hero h1{
+  margin:0 0 6px;
+  font-size:26px;
+}
+
+.hero .lead{
+  margin:0;
+  font-size:16px;
+  font-weight:600;
+}
+
+.hero .sublead{
+  margin:4px 0 0;
+  font-size:14.5px;
+  color:var(--muted);
+}
+
+/* SECTIONS */
+section{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:var(--shadow);
+}
+
+h2{
+  margin:0 0 12px;
+  font-size:17px;
+}
+
+.service-inline{
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+ul{
+  margin:0;
+  padding-left:18px;
+}
+
+p{
+  margin:0 0 10px;
+  color:var(--muted);
+}
+
+/* FORM */
+form{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+label{
+  display:flex;
+  flex-direction:column;
+  font-size:14px;
+  color:var(--muted);
+}
+
+input,textarea{
+  margin-top:6px;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  font-family:var(--font);
+  font-size:14.5px;
+}
+
+input:focus,textarea:focus{
+  border-color:var(--green);
+  outline:none;
+  box-shadow:0 0 0 3px rgba(47,158,68,.15);
+}
+
+button{
+  margin-top:8px;
+  padding:12px;
+  border-radius:999px;
+  border:1px solid var(--green);
+  background:rgba(47,158,68,.10);
+  font-weight:600;
+  cursor:pointer;
+}
+
+button:hover{
+  background:rgba(47,158,68,.18);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  margin-top:24px;
+  font-size:15px;
+}
+
+footer a{
+  font-weight:700;
+  text-decoration:none;
+  color:var(--text);
+}
+
+footer .loc{
+  margin-top:4px;
+  color:var(--muted);
+}
+
+@media(max-width:600px){
+  .logo{width:170px}
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- BLOCO CENTRALIZADO -->
+  <div class="hero">
+    <img src="logo.png" alt="MAIA Serviços Técnicos" class="logo">
+
+    <h1>MAIA Serviços Técnicos</h1>
+    <p class="lead">Manutenção em equipamentos térmicos de ensaio, controle e processo</p>
+    <p class="sublead">Mangaratiba – RJ · Atendimento no estado do Rio de Janeiro</p>
+  </div>
+
+  <!-- SERVIÇOS -->
+  <section>
+    <h2>Serviços</h2>
+    <div class="service-inline">
+      Manutenção preventiva e Manutenção corretiva
+    </div>
+
+    <p>
+      Manutenção aplicada a falhas de funcionamento, instabilidade térmica,
+      desvios de controle, paradas de equipamento e necessidade de reparo ou
+      conserto para retorno à condição operacional, incluindo problemas
+      relacionados a sensores e controladores de temperatura e umidade.
+    </p>
+  </section>
+
+  <!-- EQUIPAMENTOS -->
+  <section>
+    <h2>Equipamentos</h2>
+    <p>Equipamentos térmicos utilizados em ensaio, controle e processo térmico, incluindo:</p>
+    <ul>
+      <li>Câmara climática</li>
+      <li>Câmara de estabilidade</li>
+      <li>Estufa</li>
+      <li>Banho-maria</li>
+      <li>Forno mufla</li>
+    </ul>
+  </section>
+
+  <!-- CONTATO -->
+  <section>
+    <h2>Contato</h2>
+
+    <form action="https://formsubmit.co/maiaservtec@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Novo Pedido - MAIA Serviços Técnicos">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+
+      <label>
+        NOME SOLICITANTE
+        <input type="text" name="NOME_SOLICITANTE" required>
+      </label>
+
+      <label>
+        EMAIL
+        <input type="email" name="EMAIL" required>
+      </label>
+
+      <label>
+        TELEFONE
+        <input type="text" name="TELEFONE" required>
+      </label>
+
+      <label>
+        DESCRICAO LIVRE
+        <textarea name="DESCRICAO_LIVRE" rows="5" required></textarea>
+      </label>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div>
+      WhatsApp:
+      <a href="https://wa.me/5521973719478" target="_blank">(21) 97371-9478</a>
+    </div>
+    <div class="loc">Mangaratiba – RJ</div>
+  </footer>
+
+</div>
+</body>
+</html>
