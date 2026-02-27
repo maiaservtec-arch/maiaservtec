@@ -100,59 +100,40 @@ h2{
   padding-bottom: 8px;
 }
 
-/* PADRONIZAÇÃO DE TÍTULOS E SUBTÍTULOS (Baseado em SERVIÇOS) */
-.service-inline,
-.equip-grupo h3,
+/* PADRONIZAÇÃO DE TÍTULOS (Igual à seção SERVIÇOS) */
+.service-inline, 
+.equip-grupo h3, 
 details summary {
   font-weight:600;
   font-size:16px;
-  margin:0 0 6px 0;
-  color:var(--text); /* Mantém apenas a fonte preta padrão */
-  display:block;
+  margin-bottom:8px;
+  color: var(--text) !important; /* Força cor preta */
+  display: block;
 }
 
-details summary {
-  cursor:pointer;
-  outline:none;
-  margin-top:14px;
-}
-
-/* PADRONIZAÇÃO DE TEXTOS E LISTAS (Baseado em SERVIÇOS) */
-p,
-ul {
-  margin:0 0 16px 0;
+/* PADRONIZAÇÃO DE CONTEÚDO (Igual à seção SERVIÇOS) */
+p, ul {
+  margin:0 0 16px;
   color:var(--muted);
   font-size:14.5px;
 }
 
-p:last-child,
-ul:last-child {
-  margin-bottom:0;
-}
-
-ul {
-  padding-left:18px;
-}
-
-li {
-  margin-bottom:8px;
-}
-
-li:last-child {
-  margin-bottom:0;
-}
+ul { padding-left: 20px; }
+li { margin-bottom: 6px; }
 
 /* EQUIPAMENTOS */
 .equip-grupo{
-  margin-bottom:24px;
+  margin-bottom:20px;
 }
 .equip-grupo:last-child{
   margin-bottom:0;
 }
-details ul {
-  margin-top:8px;
-  margin-bottom:0;
+details summary {
+  cursor:pointer;
+  list-style: none;
+  margin-top: 10px;
 }
+details summary::-webkit-details-marker { display: none; }
 
 /* FORM */
 form{
@@ -190,13 +171,41 @@ button{
   border:1px solid var(--green);
   background:rgba(47,158,68,.10);
   font-weight:600;
-  color: var(--text);
   cursor:pointer;
-  transition: background 0.2s;
+  color: var(--text);
 }
 
 button:hover{
   background:rgba(47,158,68,.18);
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #20b858;
+}
+
+.whatsapp-icon {
+  width: 34px;
+  height: 34px;
 }
 
 /* FOOTER */
@@ -219,6 +228,13 @@ footer .loc{
 
 @media(max-width:600px){
   .logo{width:170px}
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+  .whatsapp-icon { width: 28px; height: 28px; }
 }
 </style>
 </head>
@@ -235,7 +251,6 @@ footer .loc{
 
   <section>
     <h2>SERVIÇOS</h2>
-
     <div class="service-inline">Manutenção preventiva</div>
     <p>
       Atuação preventiva em instrumentação e controle térmico: inspeções e verificações periódicas de leitura
@@ -310,7 +325,7 @@ footer .loc{
       <h3>Estufas e secagem</h3>
       <ul>
         <li>Estufa de laboratório — controle de aquecimento e circulação de ar (sensores, controlador e alarmes).</li>
-        <li>Estufa industrial de secagem — instrumentação e controle térmico com circulação e segurança (sensores e comandos).</li>
+        <li>Estufa industrial de secagem — instrumentação e controle térmico with circulação e segurança (sensores e comandos).</li>
       </ul>
       <details>
         <summary>Ver mais</summary>
@@ -396,48 +411,31 @@ footer .loc{
 
   <section id="contato">
     <h2>CONTATO</h2>
-
     <form action="https://formsubmit.co/comercial@maiaservtec.com.br" method="POST">
       <input type="hidden" name="_subject" value="Novo Pedido - MAIA Serviços Técnicos">
       <input type="hidden" name="_captcha" value="false">
       <input type="text" name="_honey" style="display:none">
       <input type="hidden" name="_next" value="https://maiaservtec.com.br/#contato">
 
-      <label>
-        NOME SOLICITANTE
-        <input type="text" name="NOME_SOLICITANTE" required>
-      </label>
-
-      <label>
-        EMAIL
-        <input type="email" name="EMAIL" required>
-      </label>
-
-      <label>
-        TELEFONE
-        <input type="text" name="TELEFONE" required>
-      </label>
-
-      <label>
-        DESCRIÇÂO LIVRE
-        <textarea name="DESCRICAO_LIVRE" rows="5" required></textarea>
-      </label>
-
+      <label>NOME SOLICITANTE <input type="text" name="NOME_SOLICITANTE" required></label>
+      <label>EMAIL <input type="email" name="EMAIL" required></label>
+      <label>TELEFONE <input type="text" name="TELEFONE" required></label>
+      <label>DESCRICAO LIVRE <textarea name="DESCRICAO_LIVRE" rows="5" required></textarea></label>
       <button type="submit">Enviar</button>
     </form>
   </section>
 
   <footer>
-    <div>
-      WhatsApp:
-      <a href="https://wa.me/5521973719478" target="_blank" rel="noopener">
-        (21) 97371-9478
-      </a>
-    </div>
+    <div>WhatsApp: <a href="https://wa.me/5521973719478" target="_blank" rel="noopener">(21) 97371-9478</a></div>
     <div class="loc">Mangaratiba – RJ</div>
   </footer>
+
+  <a href="https://wa.me/5521973719478?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20manutenção%20de%20equipamentos." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 32 32" class="whatsapp-icon">
+      <path d="M16.05 32h-.05c-2.68 0-5.3-.7-7.66-2.03l-8.34 2.19 2.23-8.13A15.93 15.93 0 0 1 0 15.95C0 7.15 7.18 0 16 0s16 7.15 16 15.95c0 8.8-7.18 16.05-15.95 16.05zm-7.6-5.28l.45.27a13.25 13.25 0 0 0 7.1 2.06c7.32 0 13.28-5.96 13.28-13.3S23.32 2.45 16 2.45 2.72 8.41 2.72 15.75c0 2.44.66 4.8 1.9 6.82l.3.48-1.32 4.8 4.85-1.33zM23.18 20.2c-.38-.2-2.3-1.14-2.65-1.27-.36-.13-.62-.2-.88.2-.26.4-.98 1.26-1.2 1.53-.23.26-.45.3-.84.1-2.22-.98-3.92-2.26-5.4-4.76-.23-.38 0-.58.2-.77.17-.18.38-.45.56-.67.18-.23.24-.38.36-.64.12-.26.06-.5-.03-.7-.1-.2-.88-2.14-1.2-2.92-.32-.77-.65-.66-.88-.66l-.76-.02c-.26 0-.7.1-1.06.48-.36.4-1.4 1.36-1.4 3.32 0 1.96 1.43 3.86 1.63 4.12.2.26 2.8 4.28 6.8 6.02 2.38 1.03 3.32 1.1 4.56.93 1.05-.15 3.23-1.32 3.68-2.6.45-1.27.45-2.36.32-2.6-.13-.2-.5-.33-.88-.53z" fill="currentColor"></path>
+    </svg>
+  </a>
 
 </div>
 </body>
 </html>
-
