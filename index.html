@@ -93,40 +93,62 @@ section{
 }
 
 h2{
-  margin:0 0 12px;
+  margin:0 0 16px;
   font-size:17px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
 }
 
 .service-inline{
-  font-weight:600;
-  margin-bottom:12px;
-}
-
-ul{
-  margin:0;
-  padding-left:18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--text);
+  display: block;
 }
 
 p{
-  margin:0 0 10px;
+  margin:0 0 16px;
   color:var(--muted);
+  font-size: 14.5px;
 }
 
-/* EQUIPAMENTOS (mantém o mesmo “estilo base” do seu template) */
+p:last-child { margin-bottom: 0; }
+
+/* LISTAS PADRONIZADAS */
+ul{
+  margin:0 0 16px;
+  padding-left:18px;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+
+li{ margin-bottom: 8px; }
+
+/* EQUIPAMENTOS */
 .equip-grupo{
-  margin-bottom:16px;
+  margin-bottom: 24px;
 }
 .equip-grupo:last-child{
   margin-bottom:0;
 }
 .equip-grupo h3{
-  margin:0 0 10px;
+  margin:0 0 8px;
   font-size:15.5px;
+  color: var(--green);
+}
+
+details{
+    margin-top: 10px;
 }
 details summary{
   cursor:pointer;
   font-weight:600;
-  margin:0 0 10px;
+  font-size: 14px;
+  color: var(--green);
+  outline: none;
 }
 
 /* FORM */
@@ -166,6 +188,7 @@ button{
   background:rgba(47,158,68,.10);
   font-weight:600;
   cursor:pointer;
+  transition: background 0.2s;
 }
 
 button:hover{
@@ -199,7 +222,6 @@ footer .loc{
 <body>
 <div class="wrap">
 
-  <!-- BLOCO CENTRALIZADO -->
   <div class="hero">
     <img src="logo.png" alt="MAIA Serviços Técnicos" class="logo">
     <h1>MAIA SERVIÇOS TÉCNICOS</h1>
@@ -207,7 +229,6 @@ footer .loc{
     <p class="sublead">Mangaratiba – RJ · Atendimento na Costa Verde (Mangaratiba, Itaguaí e Angra dos Reis)</p>
   </div>
 
-  <!-- SERVIÇOS -->
   <section>
     <h2>SERVIÇOS</h2>
 
@@ -222,47 +243,48 @@ footer .loc{
     <p>
       Atuação corretiva em instrumentação e controle térmico: diagnóstico de instabilidade e falhas de controle,
       identificação do ponto de falha (sensores, controlador/PID, registro, alarmes/intertravamentos e comandos
-      elétricos/eletrônicos), correção/substituição quando aplicável, ajustes e validação por testes funcionais e
+      elétricos/eletonicos), correção/substituição quando aplicável, ajustes e validação por testes funcionais e
       estabilidade para retorno à condição operacional.
     </p>
   </section>
 
-  <!-- ATENDIMENTO REGIONAL (SEO LOCAL) -->
   <section>
     <h2>ATENDIMENTO REGIONAL</h2>
+    <div class="service-inline">Cobertura Local</div>
     <p>
-      Atendimento técnico em Mangaratiba, Itaguaí e Angra dos Reis, com deslocamento para
-      laboratórios, área da saúde e processos industriais na Costa Verde.
+      Atendimento técnico especializado em Mangaratiba, Itaguaí e Angra dos Reis, com deslocamento ágil para
+      laboratórios, unidades de saúde e processos industriais em toda a região da Costa Verde.
     </p>
   </section>
 
-  <!-- ATUAÇÃO TÉCNICA (SEO) -->
   <section>
     <h2>ATUAÇÃO TÉCNICA</h2>
-    <ul>
-      <li>Diagnóstico de instabilidade térmica e falhas de controle (oscilações, desvios, overshoot e alarmes recorrentes)</li>
-      <li>Verificação da instrumentação e do controle (sensores de temperatura/umidade, controlador/PID, registradores/data loggers, alarmes e intertravamentos)</li>
-      <li>Ajustes e validação funcional (parametrização, checagem de leitura/acionamento, testes de resposta e estabilidade, circulação de ar/água e elementos de aquecimento)</li>
-    </ul>
+    
+    <div class="service-inline">Diagnóstico e Controle</div>
+    <p>Análise de instabilidade térmica e falhas de controle (oscilações, desvios, overshoot e alarmes recorrentes).</p>
+
+    <div class="service-inline">Instrumentação</div>
+    <p>Verificação de sensores de temperatura/umidade, controlador/PID, registradores/data loggers e sistemas de intertravamento.</p>
+
+    <div class="service-inline">Validação Funcional</div>
+    <p>Ajustes de parametrização, testes de resposta e estabilidade, e revisão de elementos de aquecimento e circulação.</p>
   </section>
 
-  <!-- EQUIPAMENTOS -->
   <section>
     <h2>EQUIPAMENTOS</h2>
 
     <div class="equip-grupo">
       <h3>Ensaio e controle ambiental</h3>
       <ul>
-        <li>Câmara climática (ensaio ambiental) — instrumentação e controle de temperatura/umidade (sensores, controlador, registro e alarmes).</li>
-        <li>Câmara de estabilidade — controle e monitoramento com verificação de estabilidade (sensores, registro e alarmes).</li>
+        <li>Câmara climática (ensaio ambiental)</li>
+        <li>Câmara de estabilidade</li>
       </ul>
       <details>
-        <summary>Ver mais</summary>
+        <summary>Ver mais equipamentos de ensaio</summary>
         <ul>
-          <li>Câmara de ensaio ambiental (temperatura/umidade) — instrumentação, controle e registro (sensores, controlador e alarmes).</li>
-          <li>Câmara de choque térmico — controle de ciclo e transições com instrumentação e intertravamentos (sensores e alarmes).</li>
-          <li>Câmara de temperatura (sem umidade) — controle e registro de temperatura (sensores, controlador e alarmes).</li>
-          <li>Câmara de umidade controlada — instrumentação e controle de umidade/temperatura (sensores, controlador e registro).</li>
+          <li>Câmara de choque térmico</li>
+          <li>Câmara de temperatura (sem umidade)</li>
+          <li>Câmara de umidade controlada</li>
         </ul>
       </details>
     </div>
@@ -270,16 +292,15 @@ footer .loc{
     <div class="equip-grupo">
       <h3>Fornos e aquecimento industrial</h3>
       <ul>
-        <li>Forno industrial (processo / convecção / circulação) — controle térmico com circulação e comandos (sensores e intertravamentos).</li>
-        <li>Forno mufla — controle de alta temperatura (sensores, controlador e alarmes).</li>
+        <li>Forno industrial (convecção / circulação)</li>
+        <li>Forno mufla (alta temperatura)</li>
       </ul>
       <details>
-        <summary>Ver mais</summary>
+        <summary>Ver mais equipamentos de aquecimento</summary>
         <ul>
-          <li>Forno de laboratório (alta temperatura) — controle de alta temperatura (sensores, controlador e alarmes).</li>
-          <li>Forno túnel / linha contínua — controle por zonas e monitoramento térmico (sensores, registro e alarmes).</li>
-          <li>Forno de tratamento térmico — instrumentação e controle de temperatura (sensores, controlador e registro).</li>
-          <li>Forno de secagem / forno de laboratório — controle de aquecimento e estabilidade (sensores e alarmes).</li>
+          <li>Forno túnel / linha contínua</li>
+          <li>Forno de tratamento térmico</li>
+          <li>Forno de secagem / laboratório</li>
         </ul>
       </details>
     </div>
@@ -287,19 +308,15 @@ footer .loc{
     <div class="equip-grupo">
       <h3>Estufas e secagem</h3>
       <ul>
-        <li>Estufa de laboratório — controle de aquecimento e circulação de ar (sensores, controlador e alarmes).</li>
-        <li>Estufa industrial de secagem — instrumentação e controle térmico com circulação e segurança (sensores e comandos).</li>
+        <li>Estufa de laboratório e bacteriológica</li>
+        <li>Incubadora BOD e CO₂</li>
       </ul>
       <details>
-        <summary>Ver mais</summary>
+        <summary>Ver mais modelos de estufas</summary>
         <ul>
-          <li>Estufa bacteriológica — estabilidade térmica e falhas de controle (sensores e alarmes).</li>
-          <li>Incubadora BOD — controle e monitoramento de temperatura (sensores, registro e alarmes).</li>
-          <li>Incubadora CO₂ — controle e monitoramento de temperatura (sensores, registro e alarmes).</li>
-          <li>Estufa de circulação forçada — controle de temperatura e circulação (sensores, controlador e alarmes).</li>
-          <li>Estufa de cura / polimerização — controle térmico e verificação de estabilidade (instrumentação e registro).</li>
-          <li>Estufa de pintura / cura — controle de aquecimento, circulação e segurança (sensores e intertravamentos).</li>
-          <li>Secador de bandejas / estufa de processo — instrumentação e controle de temperatura (sensores e registro).</li>
+          <li>Estufa industrial de secagem</li>
+          <li>Estufa de circulação forçada</li>
+          <li>Estufa de cura / pintura</li>
         </ul>
       </details>
     </div>
@@ -307,72 +324,20 @@ footer .loc{
     <div class="equip-grupo">
       <h3>Banhos e circulação térmica</h3>
       <ul>
-        <li>Banho termostático de laboratório (com circulação) — instrumentação e controle do setpoint com circulação (sensores e comandos).</li>
-        <li>Banho-maria de laboratório — controle de temperatura e circulação (sensores, controlador e alarmes).</li>
+        <li>Banho termostático e Banho-maria</li>
+        <li>Termocirculador / circulador térmico</li>
       </ul>
       <details>
-        <summary>Ver mais</summary>
+        <summary>Ver mais sistemas de banho</summary>
         <ul>
-          <li>Termocirculador / circulador térmico — controle e monitoramento de temperatura com circulação (sensores e registro).</li>
-          <li>Banho refrigerado (controle de temperatura) — instrumentação e controle do setpoint (sensores, registro e alarmes).</li>
-          <li>Tanque de processo (aquecimento controlado) — instrumentação e controle de temperatura (sensores e alarmes).</li>
+          <li>Banho refrigerado</li>
+          <li>Tanque de processo (aquecimento)</li>
         </ul>
       </details>
     </div>
 
-    <div class="equip-grupo">
-      <h3>Cadeia fria e conservação</h3>
-      <ul>
-        <li>Câmara fria / câmara frigorífica — monitoramento e controle de temperatura (sensores, registro e alarmes).</li>
-        <li>Refrigerador científico / farmacêutico — controle e monitoramento de temperatura (sensores, registro e alarmes).</li>
-      </ul>
-      <details>
-        <summary>Ver mais</summary>
-        <ul>
-          <li>Câmara de conservação (medicamentos/vacinas) — controle e evidência de estabilidade térmica (registro e alarmes).</li>
-          <li>Ultrafreezer -80°C — controle e monitoramento de temperatura (sensores, registro e alarmes).</li>
-          <li>Freezer -20°C — controle e monitoramento de temperatura (sensores, registro e alarmes).</li>
-          <li>Chiller / unidade de processo (controle de temperatura) — instrumentação e controle do setpoint do circuito (sensores, controlador e alarmes).</li>
-        </ul>
-      </details>
-    </div>
-
-    <div class="equip-grupo">
-      <h3>Saúde e esterilização</h3>
-      <ul>
-        <li>Autoclave — instrumentação e controle do ciclo térmico (sensores, registro e alarmes).</li>
-        <li>Estufa de esterilização (calor seco) — controle de aquecimento e estabilidade térmica (sensores e alarmes).</li>
-      </ul>
-      <details>
-        <summary>Ver mais</summary>
-        <ul>
-          <li>Aquecedor de soluções / fluidos — controle de temperatura (sensores, controlador e alarmes).</li>
-          <li>Berço aquecido / incubadora neonatal (térmico) — controle e monitoramento de temperatura (sensores, registro e alarmes).</li>
-          <li>Manta térmica / aquecimento controlado — controle e segurança térmica (sensores e controlador).</li>
-        </ul>
-      </details>
-    </div>
-
-    <div class="equip-grupo">
-      <h3>Instrumentação e controle</h3>
-      <ul>
-        <li>Instrumentação térmica (sensores e leitura) — diagnóstico de leitura, estabilidade e falhas de sinal.</li>
-        <li>Controle térmico (controladores e acionamento) — parametrização, diagnóstico de controle e falhas de acionamento.</li>
-      </ul>
-      <details>
-        <summary>Ver mais</summary>
-        <ul>
-          <li>Sensores (PT100 / termopar / umidade) — diagnóstico de leitura, estabilidade e falhas de sinal.</li>
-          <li>Controladores (PID) — parametrização, diagnóstico de controle e falhas de acionamento.</li>
-          <li>Registradores / data loggers — verificação de leitura, integridade de registro e evidências.</li>
-          <li>Alarmes e intertravamentos — diagnóstico de acionamento, sinalização e comandos.</li>
-          <li>Elementos de aquecimento (resistências) — verificação elétrica (continuidade/isolação), troca do elemento e validação por teste funcional.</li>
-        </ul>
-      </details>
-    </div>
   </section>
 
-  <!-- CONTATO -->
   <section id="contato">
     <h2>CONTATO</h2>
 
@@ -398,15 +363,14 @@ footer .loc{
       </label>
 
       <label>
-        DESCRICAO LIVRE
-        <textarea name="DESCRICAO_LIVRE" rows="5" required></textarea>
+        DESCRICAO DO PROBLEMA OU EQUIPAMENTO
+        <textarea name="DESCRICAO_LIVRE" rows="4" required></textarea>
       </label>
 
-      <button type="submit">Enviar</button>
+      <button type="submit">Enviar Solicitação</button>
     </form>
   </section>
 
-  <!-- RODAPÉ -->
   <footer>
     <div>
       WhatsApp:
