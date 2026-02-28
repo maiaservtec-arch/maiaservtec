@@ -5,6 +5,11 @@
       "has": [{ "type": "host", "value": "www.maiaservtec.com.br" }],
       "destination": "https://maiaservtec.com.br/:path*",
       "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "https://maiaservtec.com.br/",
+      "permanent": true
     }
   ]
 }
