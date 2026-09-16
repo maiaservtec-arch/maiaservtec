@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maiaservtec.com.br/sitemap.xml

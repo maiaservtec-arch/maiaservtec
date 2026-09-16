@@ -2,8 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://maiaservtec.com.br/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-09-15</lastmod>
   </url>
-
+  <url>
+    <loc>https://maiaservtec.com.br/manutencao-tecnica/</loc>
+    <lastmod>2026-09-15</lastmod>
+  </url>
+  <url>
+    <loc>https://maiaservtec.com.br/manutencao-tecnica/sistemas-termicos/</loc>
+    <lastmod>2026-09-15</lastmod>
+  </url>
+  <url>
+    <loc>https://maiaservtec.com.br/manutencao-tecnica/equipamentos-rotativos/</loc>
+    <lastmod>2026-09-15</lastmod>
+  </url>
+  <url>
+    <loc>https://maiaservtec.com.br/manutencao-tecnica/ventilacao-exaustao-fluxo-ar/</loc>
+    <lastmod>2026-09-15</lastmod>
+  </url>
+  <url>
+    <loc>https://maiaservtec.com.br/manutencao-tecnica/instrumentacao-controle/</loc>
+    <lastmod>2026-09-15</lastmod>
+  </url>
+  <url>
+    <loc>https://maiaservtec.com.br/calibracao-ensaios/</loc>
+    <lastmod>2026-09-15</lastmod>
+  </url>
+  <url>
+    <loc>https://maiaservtec.com.br/monitoramento-temperatura-umidade/</loc>
+    <lastmod>2026-09-15</lastmod>
+  </url>
+  <url>
+    <loc>https://maiaservtec.com.br/gestao-metrologica-analise-certificados/</loc>
+    <lastmod>2026-09-15</lastmod>
+  </url>
+  <url>
+    <loc>https://maiaservtec.com.br/atendimento-tecnico-em-campo/</loc>
+    <lastmod>2026-09-15</lastmod>
+  </url>
+  <url>
+    <loc>https://maiaservtec.com.br/privacidade/</loc>
+    <lastmod>2026-09-15</lastmod>
+  </url>
 </urlset>
