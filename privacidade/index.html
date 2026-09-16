@@ -683,7 +683,7 @@ section.section:last-of-type{margin-bottom:20px}
       <div class="section-head"><h2>Serviços técnicos utilizados pelo site</h2></div>
       <div class="legal-copy">
         <p><strong>FormSubmit:</strong> o formulário utiliza o serviço FormSubmit para encaminhar os dados informados ao e-mail da MAIA. O processamento técnico do envio também está sujeito às práticas do fornecedor. <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer"><strong>Consultar política do FormSubmit</strong></a>.</p>
-        <p><strong>Vercel:</strong> o site é hospedado em infraestrutura Vercel e utiliza Vercel Web Analytics. Segundo a documentação do fornecedor, o Web Analytics trabalha, por padrão, com dados agregados e sem cookies de terceiros para identificar visitantes entre sites. <a href="https://vercel.com/docs/analytics/privacy-policy" target="_blank" rel="noopener noreferrer"><strong>Consultar privacidade do Web Analytics</strong></a>.</p>
+        <p><strong>Vercel:</strong> o site é hospedado em infraestrutura Vercel e utiliza Vercel Web Analytics e Vercel Speed Insights. O Web Analytics fornece estatísticas de utilização das páginas, enquanto o Speed Insights coleta métricas de desempenho percebidas por visitantes reais, incluindo métricas de experiência e Core Web Vitals, para acompanhar o funcionamento do site. Segundo a documentação do fornecedor, esses recursos utilizam coleta de primeira parte. <a href="https://vercel.com/docs/analytics/privacy-policy" target="_blank" rel="noopener noreferrer"><strong>Consultar privacidade do Web Analytics</strong></a> e <a href="https://vercel.com/docs/speed-insights" target="_blank" rel="noopener noreferrer"><strong>documentação do Speed Insights</strong></a>.</p>
         <p>Links para serviços externos, como WhatsApp, passam a seguir as políticas e práticas do respectivo fornecedor quando o visitante acessa esses serviços.</p>
       </div>
     </div>
@@ -693,7 +693,7 @@ section.section:last-of-type{margin-bottom:20px}
     <div class="container">
       <div class="section-head"><h2>Cookies e armazenamento local</h2></div>
       <div class="legal-copy">
-        <p>Na versão atual, o código próprio do site da MAIA não cria cookies e não utiliza <em>localStorage</em> ou <em>sessionStorage</em> para rastrear visitantes. O Vercel Web Analytics utilizado pela página não depende de cookies de terceiros para sua medição padrão.</p>
+        <p>Na versão atual, o código próprio do site da MAIA não cria cookies e não utiliza <em>localStorage</em> ou <em>sessionStorage</em> para rastrear visitantes. O Vercel Web Analytics não depende de cookies de terceiros para sua medição padrão, e o Vercel Speed Insights é utilizado para coletar métricas de desempenho por meio da infraestrutura de primeira parte do site.</p>
         <p>Por esse motivo, não foi inserido um banner genérico de cookies. Se a tecnologia utilizada pelo site mudar, este aviso e a necessidade de mecanismos adicionais de consentimento deverão ser reavaliados.</p>
       </div>
     </div>
@@ -807,6 +807,14 @@ window.addEventListener('DOMContentLoaded', function () {
 
 });
 </script>
+
+<!-- Vercel Speed Insights: métricas de desempenho de usuários reais. -->
+<script>
+  window.si = window.si || function () {
+    (window.siq = window.siq || []).push(arguments);
+  };
+</script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
 
 </body>
 </html>
